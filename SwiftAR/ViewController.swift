@@ -123,22 +123,22 @@ class ViewController: UIViewController, ARSessionDelegate{
         
         //
         //write to firebase
-//       self.dbref.child("objects").childByAutoId().setValue(["username": user?.uid,
-//
-//                                                             "currentLocationLat":currentLocation.coordinate.latitude,
-//                                                             "currentLocationLong":currentLocation.coordinate.longitude,
-//
-//                                                             "hitPositionX":hitPosition.x,
-//                                                             "hitPositionY":hitPosition.y,
-//                                                             "hitPositionZ":hitPosition.z,
-//
-//                                                             "nearestCoordinateAnchorLongitude":coordinate.longitude,
-//                                                             "nearestCoordinateAnchorLatitude":coordinate.latitude,
-//
-//
-//                                                             "coordinateAnchorScenePositionX":coordinateAnchorScenePostion["X"],
-//                                                             "coordinateAnchorScenePositionY":coordinateAnchorScenePostion["Y"],
-//                                                             "coordinateAnchorScenePositionZ":coordinateAnchorScenePostion["Z"]])
+       self.dbref.child("objects").childByAutoId().setValue(["username": user?.uid,
+
+                                                             "currentLocationLat":currentLocation.coordinate.latitude,
+                                                             "currentLocationLong":currentLocation.coordinate.longitude,
+
+                                                             "hitPositionX":hitPosition.x,
+                                                             "hitPositionY":hitPosition.y,
+                                                             "hitPositionZ":hitPosition.z,
+
+                                                             "nearestCoordinateAnchorLongitude":coordinate.longitude,
+                                                             "nearestCoordinateAnchorLatitude":coordinate.latitude,
+
+
+                                                             "coordinateAnchorScenePositionX":coordinateAnchorScenePostion["X"],
+                                                             "coordinateAnchorScenePositionY":coordinateAnchorScenePostion["Y"],
+                                                             "coordinateAnchorScenePositionZ":coordinateAnchorScenePostion["Z"]])
 
     }
     
@@ -198,10 +198,10 @@ class ViewController: UIViewController, ARSessionDelegate{
                             print ("original Coordinate location", coordinateAnchorScenePositionVector)
                             print ("original hitPosition = ", hitPositionVector)
                             print ("vectorBetweenCoordinateAndObject", vectorBetweenCoordinateAndARObject)
-                            print ("current coordinate location", currentCoordinatePosition)
+                            print ("current coordinate location", currentCoordinatePosition!)
                             print ("final display pos vector = ", finalDisplayPos)
                            
-                            self.instantiateSphereAtPosition(position: hitPositionVector)
+                            self.instantiateSphereAtPosition(position: finalDisplayPos)
                             
                         }
                     })
