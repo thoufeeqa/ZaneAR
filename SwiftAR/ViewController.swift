@@ -157,13 +157,14 @@ class ViewController: UIViewController, ARSessionDelegate{
         // ref to firebase db
         dbref = Database.database().reference()
         
-        //querying the object list
+        //
+        //querying the object list and instantiating spheres
         dbref.child("objects").observeSingleEvent(of: .value, with: {(snapshot) in
             if let result = snapshot.children.allObjects as? [DataSnapshot] {
                 for child in result {
                     print ("child=", child)
                     let uniqueKey = child.key as String //get autoID
-                    print("orderID=", uniqueKey)
+                    print("uniqeKey=", uniqueKey)
                     self.dbref.child("objects/\(uniqueKey)/").observe(.value, with: { (snapshot) in
                         if let value = snapshot.value as? [String:Any] {
                             
@@ -180,10 +181,26 @@ class ViewController: UIViewController, ARSessionDelegate{
                             let hitPositionVector = SCNVector3Make(hitPositionX, hitPositionY, hitPositionZ)
                             
                             print ("Got coordinate anchor scene position -> ", coordinateAnchorScenePositionVector)
-                            print ("got hit position vector -> ", hitPositionVector)
                             let name = value["username"] as? String ?? ""
                             print("username__", name)
                             
+                            let currentCoordinatePosition = self.sceneLocationView.locationNodes.last?.position
+                            
+                            let vectorBetweenCoordinateAndARObject = SCNVector3Make(hitPositionX-coordinateAnchorScenePositionX,
+                                                                                    hitPositionY-coordinateAnchorScenePositionY,
+                                                                                    hitPositionZ-coordinateAnchorScenePositionZ)
+                            
+                            
+                            let finalDisplayPos = SCNVector3Make(vectorBetweenCoordinateAndARObject.x + (currentCoordinatePosition?.x)!,
+                                                                 vectorBetweenCoordinateAndARObject.y + (currentCoordinatePosition?.y)!,
+                                                                 vectorBetweenCoordinateAndARObject.z + (currentCoordinatePosition?.z)!)
+                            
+                            print ("original Coordinate location", coordinateAnchorScenePositionVector)
+                            print ("original hitPosition = ", hitPositionVector)
+                            print ("vectorBetweenCoordinateAndObject", vectorBetweenCoordinateAndARObject)
+                            print ("current coordinate location", currentCoordinatePosition)
+                            print ("final display pos vector = ", finalDisplayPos)
+                           
                             self.instantiateSphereAtPosition(position: hitPositionVector)
                             
                         }
