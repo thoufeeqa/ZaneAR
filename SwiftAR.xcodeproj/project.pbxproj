@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0981DF2E06F25F0B60E96EDE /* Pods_SwiftARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECC89862F05391BE1A9672F /* Pods_SwiftARUITests.framework */; };
 		133C49D41F723AA60098C724 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C49D31F723AA60098C724 /* AppDelegate.swift */; };
 		133C49D61F723AA60098C724 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 133C49D51F723AA60098C724 /* art.scnassets */; };
 		133C49D81F723AA60098C724 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C49D71F723AA60098C724 /* ViewController.swift */; };
@@ -15,6 +16,22 @@
 		133C49E01F723AA60098C724 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133C49DE1F723AA60098C724 /* LaunchScreen.storyboard */; };
 		133C49EB1F723AA60098C724 /* SwiftARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C49EA1F723AA60098C724 /* SwiftARTests.swift */; };
 		133C49F61F723AA60098C724 /* SwiftARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C49F51F723AA60098C724 /* SwiftARUITests.swift */; };
+		133C4A8D1F74DAC20098C724 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C4A8C1F74DAC20098C724 /* BaseNode.swift */; };
+		136547BA1F785D72005AB161 /* locAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136547B91F785D72005AB161 /* locAR.swift */; };
+		138238FE1F7F4CEE0004065D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 138238FD1F7F4CED0004065D /* GoogleService-Info.plist */; };
+		13922EB61F7F2DBE00F220A2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 13922EB51F7F2DBE00F220A2 /* libsqlite3.tbd */; };
+		13AC79601F74E01400A36FF2 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC79561F74E01300A36FF2 /* SceneLocationView.swift */; };
+		13AC79611F74E01400A36FF2 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC79571F74E01300A36FF2 /* SceneLocationEstimate+Extensions.swift */; };
+		13AC79621F74E01400A36FF2 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC79581F74E01300A36FF2 /* LocationNode.swift */; };
+		13AC79631F74E01400A36FF2 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC79591F74E01300A36FF2 /* CGPoint+Extensions.swift */; };
+		13AC79641F74E01400A36FF2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795A1F74E01300A36FF2 /* LocationManager.swift */; };
+		13AC79651F74E01400A36FF2 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795B1F74E01300A36FF2 /* SCNVector3+Extensions.swift */; };
+		13AC79661F74E01400A36FF2 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795C1F74E01300A36FF2 /* FloatingPoint+Radians.swift */; };
+		13AC79671F74E01400A36FF2 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795D1F74E01300A36FF2 /* SCNNode+Extensions.swift */; };
+		13AC79681F74E01400A36FF2 /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795E1F74E01400A36FF2 /* SceneLocationEstimate.swift */; };
+		13AC79691F74E01400A36FF2 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AC795F1F74E01400A36FF2 /* CLLocation+Extensions.swift */; };
+		33EBF3B2136E22650BDBFA1A /* Pods_SwiftAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F71A33464FE44928FE473EB /* Pods_SwiftAR.framework */; };
+		767B27F5379750B33FA6C0A2 /* Pods_SwiftARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25ECC630BD6B72044F36430 /* Pods_SwiftARTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +66,30 @@
 		133C49F11F723AA60098C724 /* SwiftARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		133C49F51F723AA60098C724 /* SwiftARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftARUITests.swift; sourceTree = "<group>"; };
 		133C49F71F723AA60098C724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133C4A8C1F74DAC20098C724 /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
+		136547B91F785D72005AB161 /* locAR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locAR.swift; sourceTree = "<group>"; };
+		138238FD1F7F4CED0004065D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13922EB31F7F2D8E00F220A2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		13922EB51F7F2DBE00F220A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		13AC79561F74E01300A36FF2 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneLocationView.swift; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/SceneLocationView.swift"; sourceTree = "<group>"; };
+		13AC79571F74E01300A36FF2 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SceneLocationEstimate+Extensions.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		13AC79581F74E01300A36FF2 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationNode.swift; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/LocationNode.swift"; sourceTree = "<group>"; };
+		13AC79591F74E01300A36FF2 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extensions.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		13AC795A1F74E01300A36FF2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/LocationManager.swift"; sourceTree = "<group>"; };
+		13AC795B1F74E01300A36FF2 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SCNVector3+Extensions.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		13AC795C1F74E01300A36FF2 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FloatingPoint+Radians.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		13AC795D1F74E01300A36FF2 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SCNNode+Extensions.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		13AC795E1F74E01400A36FF2 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneLocationEstimate.swift; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/SceneLocationEstimate.swift"; sourceTree = "<group>"; };
+		13AC795F1F74E01400A36FF2 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocation+Extensions.swift"; path = "../../../../Downloads/ARKit-CoreLocation-master/ARKit+CoreLocation/Source/CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		1E7F96B0C721AB46A4B3AF5F /* Pods-SwiftARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftARTests/Pods-SwiftARTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F71A33464FE44928FE473EB /* Pods_SwiftAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		556312BC8C97A878CB86B591 /* Pods-SwiftAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR.debug.xcconfig"; sourceTree = "<group>"; };
+		5A6D2528ACA211E42AD52119 /* Pods-SwiftARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftARUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftARUITests/Pods-SwiftARUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E63D273F117B1F63E6C0ECE /* Pods-SwiftARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftARUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftARUITests/Pods-SwiftARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5ECC89862F05391BE1A9672F /* Pods_SwiftARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6268B3437F0DD8C5EE6192B6 /* Pods-SwiftAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR.release.xcconfig"; sourceTree = "<group>"; };
+		9F74BFBF9B35698F736BDCB7 /* Pods-SwiftARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftARTests/Pods-SwiftARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C25ECC630BD6B72044F36430 /* Pods_SwiftARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13922EB61F7F2DBE00F220A2 /* libsqlite3.tbd in Frameworks */,
+				33EBF3B2136E22650BDBFA1A /* Pods_SwiftAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767B27F5379750B33FA6C0A2 /* Pods_SwiftARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0981DF2E06F25F0B60E96EDE /* Pods_SwiftARUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +128,8 @@
 				133C49E91F723AA60098C724 /* SwiftARTests */,
 				133C49F41F723AA60098C724 /* SwiftARUITests */,
 				133C49D11F723AA60098C724 /* Products */,
+				13922EB21F7F2D8E00F220A2 /* Frameworks */,
+				69054D1153BFE27EC09E33E6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +146,8 @@
 		133C49D21F723AA60098C724 /* SwiftAR */ = {
 			isa = PBXGroup;
 			children = (
+				138238FD1F7F4CED0004065D /* GoogleService-Info.plist */,
+				13AC79551F74DFEB00A36FF2 /* CLPackages */,
 				133C49D31F723AA60098C724 /* AppDelegate.swift */,
 				133C49D51F723AA60098C724 /* art.scnassets */,
 				133C49D71F723AA60098C724 /* ViewController.swift */,
@@ -106,6 +155,8 @@
 				133C49DC1F723AA60098C724 /* Assets.xcassets */,
 				133C49DE1F723AA60098C724 /* LaunchScreen.storyboard */,
 				133C49E11F723AA60098C724 /* Info.plist */,
+				133C4A8C1F74DAC20098C724 /* BaseNode.swift */,
+				136547B91F785D72005AB161 /* locAR.swift */,
 			);
 			path = SwiftAR;
 			sourceTree = "<group>";
@@ -128,6 +179,48 @@
 			path = SwiftARUITests;
 			sourceTree = "<group>";
 		};
+		13922EB21F7F2D8E00F220A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13922EB51F7F2DBE00F220A2 /* libsqlite3.tbd */,
+				13922EB31F7F2D8E00F220A2 /* CoreData.framework */,
+				4F71A33464FE44928FE473EB /* Pods_SwiftAR.framework */,
+				C25ECC630BD6B72044F36430 /* Pods_SwiftARTests.framework */,
+				5ECC89862F05391BE1A9672F /* Pods_SwiftARUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13AC79551F74DFEB00A36FF2 /* CLPackages */ = {
+			isa = PBXGroup;
+			children = (
+				13AC79591F74E01300A36FF2 /* CGPoint+Extensions.swift */,
+				13AC795F1F74E01400A36FF2 /* CLLocation+Extensions.swift */,
+				13AC795C1F74E01300A36FF2 /* FloatingPoint+Radians.swift */,
+				13AC795A1F74E01300A36FF2 /* LocationManager.swift */,
+				13AC79581F74E01300A36FF2 /* LocationNode.swift */,
+				13AC795E1F74E01400A36FF2 /* SceneLocationEstimate.swift */,
+				13AC79571F74E01300A36FF2 /* SceneLocationEstimate+Extensions.swift */,
+				13AC79561F74E01300A36FF2 /* SceneLocationView.swift */,
+				13AC795D1F74E01300A36FF2 /* SCNNode+Extensions.swift */,
+				13AC795B1F74E01300A36FF2 /* SCNVector3+Extensions.swift */,
+			);
+			path = CLPackages;
+			sourceTree = "<group>";
+		};
+		69054D1153BFE27EC09E33E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				556312BC8C97A878CB86B591 /* Pods-SwiftAR.debug.xcconfig */,
+				6268B3437F0DD8C5EE6192B6 /* Pods-SwiftAR.release.xcconfig */,
+				9F74BFBF9B35698F736BDCB7 /* Pods-SwiftARTests.debug.xcconfig */,
+				1E7F96B0C721AB46A4B3AF5F /* Pods-SwiftARTests.release.xcconfig */,
+				5E63D273F117B1F63E6C0ECE /* Pods-SwiftARUITests.debug.xcconfig */,
+				5A6D2528ACA211E42AD52119 /* Pods-SwiftARUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 133C49FA1F723AA60098C724 /* Build configuration list for PBXNativeTarget "SwiftAR" */;
 			buildPhases = (
+				C5508D60BB328854BCBE9720 /* [CP] Check Pods Manifest.lock */,
 				133C49CC1F723AA60098C724 /* Sources */,
 				133C49CD1F723AA60098C724 /* Frameworks */,
 				133C49CE1F723AA60098C724 /* Resources */,
+				2D92B3166B0D06A9392D186C /* [CP] Embed Pods Frameworks */,
+				CD1FEFBA7375C52BD3F5CBA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 133C49FD1F723AA60098C724 /* Build configuration list for PBXNativeTarget "SwiftARTests" */;
 			buildPhases = (
+				99FA2E176E8214906333A0B1 /* [CP] Check Pods Manifest.lock */,
 				133C49E21F723AA60098C724 /* Sources */,
 				133C49E31F723AA60098C724 /* Frameworks */,
 				133C49E41F723AA60098C724 /* Resources */,
+				E761C4A6FB9A99E255DE92EC /* [CP] Embed Pods Frameworks */,
+				B5762BEF117BC11A20C9CD7B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 133C4A001F723AA60098C724 /* Build configuration list for PBXNativeTarget "SwiftARUITests" */;
 			buildPhases = (
+				CFAF455FB2E0C0028605DBDE /* [CP] Check Pods Manifest.lock */,
 				133C49ED1F723AA60098C724 /* Sources */,
 				133C49EE1F723AA60098C724 /* Frameworks */,
 				133C49EF1F723AA60098C724 /* Resources */,
+				04B8347AF1D558E7AB2D16A5 /* [CP] Embed Pods Frameworks */,
+				1B8AD9171DBF7DC4DD6E10D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +339,7 @@
 			files = (
 				133C49D61F723AA60098C724 /* art.scnassets in Resources */,
 				133C49E01F723AA60098C724 /* LaunchScreen.storyboard in Resources */,
+				138238FE1F7F4CEE0004065D /* GoogleService-Info.plist in Resources */,
 				133C49DD1F723AA60098C724 /* Assets.xcassets in Resources */,
 				133C49DB1F723AA60098C724 /* Main.storyboard in Resources */,
 			);
@@ -258,13 +361,186 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04B8347AF1D558E7AB2D16A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftARUITests/Pods-SwiftARUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B8AD9171DBF7DC4DD6E10D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftARUITests/Pods-SwiftARUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D92B3166B0D06A9392D186C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99FA2E176E8214906333A0B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftARTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5762BEF117BC11A20C9CD7B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftARTests/Pods-SwiftARTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5508D60BB328854BCBE9720 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD1FEFBA7375C52BD3F5CBA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftAR/Pods-SwiftAR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFAF455FB2E0C0028605DBDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftARUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E761C4A6FB9A99E255DE92EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftARTests/Pods-SwiftARTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		133C49CC1F723AA60098C724 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AC79691F74E01400A36FF2 /* CLLocation+Extensions.swift in Sources */,
 				133C49D81F723AA60098C724 /* ViewController.swift in Sources */,
+				133C4A8D1F74DAC20098C724 /* BaseNode.swift in Sources */,
+				13AC79621F74E01400A36FF2 /* LocationNode.swift in Sources */,
+				13AC79611F74E01400A36FF2 /* SceneLocationEstimate+Extensions.swift in Sources */,
+				13AC79681F74E01400A36FF2 /* SceneLocationEstimate.swift in Sources */,
+				13AC79601F74E01400A36FF2 /* SceneLocationView.swift in Sources */,
+				13AC79671F74E01400A36FF2 /* SCNNode+Extensions.swift in Sources */,
+				13AC79631F74E01400A36FF2 /* CGPoint+Extensions.swift in Sources */,
+				13AC79661F74E01400A36FF2 /* FloatingPoint+Radians.swift in Sources */,
 				133C49D41F723AA60098C724 /* AppDelegate.swift in Sources */,
+				13AC79641F74E01400A36FF2 /* LocationManager.swift in Sources */,
+				13AC79651F74E01400A36FF2 /* SCNVector3+Extensions.swift in Sources */,
+				136547BA1F785D72005AB161 /* locAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +704,13 @@
 		};
 		133C49FB1F723AA60098C724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 556312BC8C97A878CB86B591 /* Pods-SwiftAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65D7JAN3U4;
 				INFOPLIST_FILE = SwiftAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thoufeeq.SwiftAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,11 +721,13 @@
 		};
 		133C49FC1F723AA60098C724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6268B3437F0DD8C5EE6192B6 /* Pods-SwiftAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 65D7JAN3U4;
 				INFOPLIST_FILE = SwiftAR/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = thoufeeq.SwiftAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +738,7 @@
 		};
 		133C49FE1F723AA60098C724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F74BFBF9B35698F736BDCB7 /* Pods-SwiftARTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +756,7 @@
 		};
 		133C49FF1F723AA60098C724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7F96B0C721AB46A4B3AF5F /* Pods-SwiftARTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +774,7 @@
 		};
 		133C4A011F723AA60098C724 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E63D273F117B1F63E6C0ECE /* Pods-SwiftARUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +791,7 @@
 		};
 		133C4A021F723AA60098C724 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A6D2528ACA211E42AD52119 /* Pods-SwiftARUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
