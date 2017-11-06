@@ -152,11 +152,11 @@
 				133C49D51F723AA60098C724 /* art.scnassets */,
 				133C49D71F723AA60098C724 /* ViewController.swift */,
 				133C49D91F723AA60098C724 /* Main.storyboard */,
+				136547B91F785D72005AB161 /* locAR.swift */,
 				133C49DC1F723AA60098C724 /* Assets.xcassets */,
 				133C49DE1F723AA60098C724 /* LaunchScreen.storyboard */,
 				133C49E11F723AA60098C724 /* Info.plist */,
 				133C4A8C1F74DAC20098C724 /* BaseNode.swift */,
-				136547B91F785D72005AB161 /* locAR.swift */,
 			);
 			path = SwiftAR;
 			sourceTree = "<group>";

@@ -239,6 +239,7 @@ class ViewController: UIViewController, ARSessionDelegate{
         super.viewWillAppear(animated)
         dbref = Database.database().reference()
         sceneLocationView.run()
+        getObjectData()
 
     }
 
