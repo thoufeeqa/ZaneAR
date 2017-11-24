@@ -28,10 +28,12 @@ let user = Auth.auth().currentUser
 
 
 
-class ViewController: UIViewController, ARSessionDelegate{
+class ViewController: UIViewController, ARSessionDelegate, ARSCNViewDelegate{
 
     var sceneLocationView = SceneLocationView()
     var dbref: DatabaseReference!
+    var draw = false
+    var lineColor = UIColor.cyan
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,10 @@ class ViewController: UIViewController, ARSessionDelegate{
         }
 
         //sceneLocationView.run()
+        
+        
+        sceneLocationView.delegate = self //add this to access the scenelocationview's render functions and override them
+        
         sceneLocationView.showsStatistics = true
         sceneLocationView.showAxesNode = true
         sceneLocationView.orientToTrueNorth = true
@@ -73,9 +79,15 @@ class ViewController: UIViewController, ARSessionDelegate{
 //        print ("added sphere")
 
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.draw = false
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print ("Touching screen")
+        self.draw = true
+        
         guard let touch = touches.first else {return}
         
         let results = sceneLocationView.hitTest(touch.location(in: sceneLocationView), types: [ARHitTestResult.ResultType.featurePoint])
@@ -123,27 +135,27 @@ class ViewController: UIViewController, ARSessionDelegate{
         
         //
         //write to firebase
-       self.dbref.child("objects").childByAutoId().setValue(["username": user?.uid,
-
-                                                             "currentLocationLat":currentLocation.coordinate.latitude,
-                                                             "currentLocationLong":currentLocation.coordinate.longitude,
-
-                                                             "hitPositionX":hitPosition.x,
-                                                             "hitPositionY":hitPosition.y,
-                                                             "hitPositionZ":hitPosition.z,
-
-                                                             "nearestCoordinateAnchorLongitude":coordinate.longitude,
-                                                             "nearestCoordinateAnchorLatitude":coordinate.latitude,
-
-
-                                                             "coordinateAnchorScenePositionX":coordinateAnchorScenePostion["X"],
-                                                             "coordinateAnchorScenePositionY":coordinateAnchorScenePostion["Y"],
-                                                             "coordinateAnchorScenePositionZ":coordinateAnchorScenePostion["Z"]])
+//       self.dbref.child("objects").childByAutoId().setValue(["username": user?.uid,
+//
+//                                                             "currentLocationLat":currentLocation.coordinate.latitude,
+//                                                             "currentLocationLong":currentLocation.coordinate.longitude,
+//
+//                                                             "hitPositionX":hitPosition.x,
+//                                                             "hitPositionY":hitPosition.y,
+//                                                             "hitPositionZ":hitPosition.z,
+//
+//                                                             "nearestCoordinateAnchorLongitude":coordinate.longitude,
+//                                                             "nearestCoordinateAnchorLatitude":coordinate.latitude,
+//
+//
+//                                                             "coordinateAnchorScenePositionX":coordinateAnchorScenePostion["X"],
+//                                                             "coordinateAnchorScenePositionY":coordinateAnchorScenePostion["Y"],
+//                                                             "coordinateAnchorScenePositionZ":coordinateAnchorScenePostion["Z"]])
 
     }
     
     func instantiateSphereAtPosition(position: SCNVector3){
-        let circleNode = self.createSphereNode(with: 0.2, color: .blue)
+        let circleNode = self.createSphereNode(with: 0.01, color: .blue)
         circleNode.position = position
         self.sceneLocationView.scene.rootNode.addChildNode(circleNode)
         print ("added sphere")
@@ -255,17 +267,59 @@ class ViewController: UIViewController, ARSessionDelegate{
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
+    
+    
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        
+        guard let pointOfView = sceneLocationView.pointOfView else { return }
+        
+        let mat = pointOfView.transform
+        let dir = SCNVector3(-1 * mat.m31, -1 * mat.m32, -1 * mat.m33)
+        let currentPosition = pointOfView.position + (dir * 0.1)
+        
+        if self.draw {
+                
+                let sphere = SCNSphere(radius: 0.01)
+                sphere.firstMaterial?.diffuse.contents = lineColor
+                let sphereNode = SCNNode(geometry: sphere)
+                sphereNode.position = currentPosition
+                sceneLocationView.scene.rootNode.addChildNode(sphereNode)
+            
+                guard let currentLocation = sceneLocationView.currentLocation() else {return}
+                let currentLocationLat:Double = currentLocation.coordinate.latitude
+                let currentLocationLong:Double = currentLocation.coordinate.longitude
+                let currentLocationData = ["longitude":currentLocationLong, "latitude":currentLocationLat]
+                let nearestCoordinateAnchor = ["longitude":coordinate.longitude, "latitude":coordinate.latitude]
+                let hitPositionData = ["hitPosX":currentPosition.x, "hitPosY":currentPosition.y, "hitPosZ":currentPosition.z]
+                let coordinateAnchorScenePostion = ["X":sceneLocationView.locationNodes.last?.position.x,
+                                                    "Y":sceneLocationView.locationNodes.last?.position.y,
+                                                    "Z":sceneLocationView.locationNodes.last?.position.z]
+            
+                //
+                //write to firebase
+                       self.dbref.child("objects").childByAutoId().setValue(["username": user?.uid,
+                
+                                                                             "currentLocationLat":currentLocation.coordinate.latitude,
+                                                                             "currentLocationLong":currentLocation.coordinate.longitude,
+                
+                                                                             "hitPositionX":currentPosition.x,
+                                                                             "hitPositionY":currentPosition.y,
+                                                                             "hitPositionZ":currentPosition.z,
+                
+                                                                             "nearestCoordinateAnchorLongitude":coordinate.longitude,
+                                                                             "nearestCoordinateAnchorLatitude":coordinate.latitude,
+                
+                
+                                                                             "coordinateAnchorScenePositionX":coordinateAnchorScenePostion["X"],
+                                                                             "coordinateAnchorScenePositionY":coordinateAnchorScenePostion["Y"],
+                                                                             "coordinateAnchorScenePositionZ":coordinateAnchorScenePostion["Z"]])
 
-    // MARK: - ARSCNViewDelegate
+            }
+        
+        print("number of children ->", sceneLocationView.scene.rootNode.childNodes.count)
+    }
 
-    /*
-     // Override to create and configure nodes for anchors added to the view's session.
-     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-     let node = SCNNode()
-
-     return node
-     }
-     */
+    
     
     func createSphereNode(with radius: CGFloat, color: UIColor) -> SCNNode{
         let geometry = SCNSphere(radius: radius)
