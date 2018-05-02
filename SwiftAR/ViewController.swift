@@ -184,13 +184,13 @@ class ViewController: UIViewController, ARSessionDelegate, ARSCNViewDelegate{
                             let coordinateAnchorScenePositionY = value["coordinateAnchorScenePositionY"] as! Float
                             let coordinateAnchorScenePositionZ = value["coordinateAnchorScenePositionZ"] as! Float
                             
-                            let hitPositionX = value["hitPositionX"] as! Float
-                            let hitPositionY = value["hitPositionY"] as! Float
-                            let hitPositionZ = value["hitPositionZ"] as! Float
+                            let hitPositionX = (value["hitPositionX"] as? NSNumber)?.floatValue
+                            let hitPositionY = (value["hitPositionY"] as? NSNumber)?.floatValue
+                            let hitPositionZ = (value["hitPositionZ"] as? NSNumber)?.floatValue
                             
                             let coordinateAnchorScenePositionVector = SCNVector3Make(coordinateAnchorScenePositionX, coordinateAnchorScenePositionY, coordinateAnchorScenePositionZ)
                             
-                            let hitPositionVector = SCNVector3Make(hitPositionX, hitPositionY, hitPositionZ)
+                            let hitPositionVector = SCNVector3Make(hitPositionX!, hitPositionY!, hitPositionZ!)
                             
                             print ("Got coordinate anchor scene position -> ", coordinateAnchorScenePositionVector)
                             let name = value["username"] as? String ?? ""
@@ -198,9 +198,9 @@ class ViewController: UIViewController, ARSessionDelegate, ARSCNViewDelegate{
                             
                             let currentCoordinatePosition = self.sceneLocationView.locationNodes.last?.position
                             
-                            let vectorBetweenCoordinateAndARObject = SCNVector3Make(hitPositionX-coordinateAnchorScenePositionX,
-                                                                                    hitPositionY-coordinateAnchorScenePositionY,
-                                                                                    hitPositionZ-coordinateAnchorScenePositionZ)
+                            let vectorBetweenCoordinateAndARObject = SCNVector3Make(hitPositionX!-coordinateAnchorScenePositionX,
+                                                                                    hitPositionY!-coordinateAnchorScenePositionY,
+                                                                                    hitPositionZ!-coordinateAnchorScenePositionZ)
                             
                             
                             let finalDisplayPos = SCNVector3Make(vectorBetweenCoordinateAndARObject.x + (currentCoordinatePosition?.x)!,
